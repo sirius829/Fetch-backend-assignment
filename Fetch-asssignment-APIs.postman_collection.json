@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a0f2d87e-6b53-4d34-a7a9-2772055202f9",
+		"name": "Fetch-asssignment-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36537302"
+	},
+	"item": [
+		{
+			"name": "Process Receipt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"retailer\": \"Target\",\r\n    \"purchaseDate\": \"2022-01-02\",\r\n    \"purchaseTime\": \"13:13\",\r\n    \"total\": \"1.25\",\r\n    \"items\": [\r\n        {\"shortDescription\": \"Pepsi - 12-oz\", \"price\": \"1.25\"}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/receipts/process",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Receipt Points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/receipts/:id/points",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"receipts",
+						":id",
+						"points"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "304bab5a-a538-47a0-92d2-ae9c552e531b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
