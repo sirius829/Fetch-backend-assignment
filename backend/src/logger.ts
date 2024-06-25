@@ -1,5 +1,4 @@
 import { createLogger, format, transports } from 'winston';
-import { Writable } from 'stream';
 
 const { combine, timestamp, printf, colorize } = format;
 
